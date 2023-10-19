@@ -2,29 +2,29 @@
 
 /**
  **_strncpy - copies a string
- *@dest: the destination string to be copied to
- *@src: the source string
- *@n: the amount of characters to be copied
+ *@dest: destination string to be copied to
+ *@src: source string
+ *@n: amount of characters to be copied
  *Return: the concatenated string
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int a, b;
+	int i, j;
 	char *s = dest;
 
-	a = 0;
-	while (src[a] != '\0' && a < n - 1)
+	i = 0;
+	while (src[i] != '\0' && i < n - 1)
 	{
-		dest[a] = src[a];
-		a++;
+		dest[i] = src[i];
+		i++;
 	}
-	if (a < n)
+	if (i < n)
 	{
-		b = a;
-		while (b < n)
+		j = i;
+		while (j < n)
 		{
-			dest[b] = '\0';
-			b++;
+			dest[j] = '\0';
+			j++;
 		}
 	}
 	return (s);
